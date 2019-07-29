@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  web:
+    build: .
+    environment:
+      PORT: 3000
+      MICRO_CONFIG_URL: http://localhost:8501/assets/micro-config
+      MICRO_DEPS_URL: http://localhost:8502/assets/micro-deps
+      NAVBAR_URL: http://localhost:8503/assets/navbar
+      APM_URL: http://localhost:8504/assets/apm
+      MARKETPLACE_URL: http://localhost:8505/assets/marketplace
+    ports:
+      - "8500:3000"
