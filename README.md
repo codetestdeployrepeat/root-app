@@ -1,5 +1,7 @@
 # SoundSmart.io Root Application
 
+![Micro-frontend](https://github.com/leonelcloudsmart/root-app/raw/master/public/images/micro-frontend-example.jpg)
+
 ## Components
 
 * Root app
