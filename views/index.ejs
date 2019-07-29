@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+  -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@portal/micro-config": "/assets/micro-config/micro-config.js",
+          "@portal/navbar": "/assets/navbar/js/navbar.app.js",
+          "@portal/apm": "/assets/apm/js/apm.app.js",
+          "@portal/marketplace": "/assets/marketplace/js/marketplace.app.js"
+        }
+      }
+  </script>
+
+  <script src='https://unpkg.com/systemjs@3.1.2/dist/system.js'></script>
+  <script src='https://unpkg.com/systemjs@3.1.2/dist/extras/amd.js'></script>
+  <script src='https://unpkg.com/systemjs@3.1.2/dist/extras/named-exports.js'></script>
+
+  <!-- Load the common micro-deps-->
+  <script src="/assets/micro-deps/micro-deps.js"></script>
+
+  <!-- Load the application -->
+  <script>
+    System.import('@portal/micro-config')
+  </script>
+
+  <title>SoundSmart.io</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="navbar-app"></div>
+<div id="apm-app"></div>
+<div id="marketplace-app"></div>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+</body>
+</html>
