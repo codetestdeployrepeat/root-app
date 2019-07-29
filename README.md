@@ -186,6 +186,8 @@ name: 'static/media/[name].[hash:8].[ext]',
 name: 'assets/app-name/media/[name].[hash:8].[ext]',
 ```
 
+See https://single-spa.js.org/docs/faq.html#create-react-app for more details.
+
 ## Setup for Root app
 
 ### Configure environment
