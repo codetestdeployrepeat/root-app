@@ -15,11 +15,11 @@ const createProxy = (path, target) => {
   app.use(path, proxy({ target, changeOrigin: true, pathRewrite: {[`^${path}`]: ''} }));
 };
 
-createProxy('/assets/micro-config', 'http://localhost:8401/assets/micro-config');
-createProxy('/assets/micro-deps', 'http://localhost:8402/assets/micro-deps');
-createProxy('/assets/navbar', 'http://localhost:8403/assets/navbar');
-createProxy('/assets/apm', 'http://localhost:8404/assets/apm');
-createProxy('/assets/marketplace', 'http://localhost:8405/assets/marketplace');
+createProxy('/assets/micro-config', process.env.MICRO_CONFIG_URL);
+createProxy('/assets/micro-deps', process.env.MICRO_DEPS_URL);
+createProxy('/assets/navbar', process.env.NAVBAR_URL);
+createProxy('/assets/apm', process.env.APM_URL);
+createProxy('/assets/marketplace', process.env.MARKETPLACE_URL);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use same routes for each of these for now, can be optimized later on
 app.use('/', indexRouter);
 app.use('/apm', indexRouter);
 app.use('/marketplace', indexRouter);
