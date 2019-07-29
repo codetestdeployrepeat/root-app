@@ -4,30 +4,30 @@
 
 ## Components
 
-* Root app
+* [Root app](https://github.com/leonelcloudsmart/root-app)
   * Web server that serves the main app
   * Express JS server with simple templating (EJS)
   * Loads the initial HTML and minimal assets
-  * Handles proxy to each micro-frontend assets
+  * Handles proxy to each micro-frontend static assets
     * /assets/micro-config -> micro-config server
     * /assets/micro-deps -> micro-deps server
     * /assets/apm -> apm server
     * /assets/marketplace -> marketplace server
-* Micro-Config app
+* [Micro-Config app](https://github.com/leonelcloudsmart/micro-config)
   * Handles configuration for each micro-frontend
   * Maps URL paths to the correct micro-frontend
   * Just a small JS bundle file
-* Micro-Deps app
+* [Micro-Deps app](https://github.com/leonelcloudsmart/micro-deps)
   * Spits out JS files common to all the apps
-* Navbar app (Single SPA/React App)
+* [Navbar app (Single SPA/React App)](https://github.com/leonelcloudsmart/navbar)
   * Shows the main navigation menu
   * Loads on all pages
   * Full single-spa React app
-* APM app (Single SPA/React App)
+* [APM app (Single SPA/React App)](https://github.com/leonelcloudsmart/apm)
   * The agile project manager app
   * Maps to /apm URL
   * Full single-spa React app
-* Marketplace app  (Single SPA/React App)
+* [Marketplace app  (Single SPA/React App)](https://github.com/leonelcloudsmart/marketplace)
   * The marketplace app
   * Maps to /marketplace URL
   * Full single-spa React app 
